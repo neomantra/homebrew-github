@@ -5,11 +5,11 @@
 class Gotf < Formula
   desc "Golang-based Time Formatter"
   homepage "https://github.com/neomantra/gotf"
-  version "0.0.1"
+  version "0.0.2"
 
   on_macos do
-    url "https://github.com/neomantra/gotf/releases/download/v0.0.1/gotf_0.0.1_Darwin_all.tar.gz"
-    sha256 "3f3aebd711e7f62a21f4cc21151ff211e89fc7b9c5db97b7f6d1b1689232ac7f"
+    url "https://github.com/neomantra/gotf/releases/download/v0.0.2/gotf_0.0.2_Darwin_all.tar.gz"
+    sha256 "dabc8a6fbd342cf5e0cfc29eb3ec9000e4f75b70ce820d002a47bb5249ca0fe7"
 
     def install
       bin.install "gotf"
@@ -17,17 +17,17 @@ class Gotf < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/neomantra/gotf/releases/download/v0.0.1/gotf_0.0.1_Linux_arm64.tar.gz"
-      sha256 "b28a84934ce19913cdfa755ce69b7ebf425636850216d81c34fe2c2d324daf44"
+    if Hardware::CPU.intel?
+      url "https://github.com/neomantra/gotf/releases/download/v0.0.2/gotf_0.0.2_Linux_x86_64.tar.gz"
+      sha256 "32e441d75ca79a6dc64bc4d67dc1168a49fafa30d0e402718d034f22cfad4577"
 
       def install
         bin.install "gotf"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/neomantra/gotf/releases/download/v0.0.1/gotf_0.0.1_Linux_x86_64.tar.gz"
-      sha256 "f350f7f3cba01d7be74f8b0b58c9d08e2c91099b1af0455a72d9abfdb922e5e7"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/neomantra/gotf/releases/download/v0.0.2/gotf_0.0.2_Linux_arm64.tar.gz"
+      sha256 "cce4b7eb42f296a315e24f2d472e0f293948610b835f216b3282348611490923"
 
       def install
         bin.install "gotf"
