@@ -5,11 +5,11 @@
 class Tf < Formula
   desc "Golang-based Time Formatter"
   homepage "https://github.com/neomantra/tf"
-  version "0.0.3"
+  version "0.0.4"
 
   on_macos do
-    url "https://github.com/neomantra/tf/releases/download/v0.0.3/tf_0.0.3_Darwin_all.tar.gz"
-    sha256 "52bd2981beb94ba3137f7111e02485ed8177bb7c1a91f07372701ff50f9ee840"
+    url "https://github.com/neomantra/tf/releases/download/v0.0.4/tf_0.0.4_Darwin_all.tar.gz"
+    sha256 "f598ac214c13013e7448e9a3bbc2ac89b5eff9712cf837ff395dcdcb3b5bfebd"
 
     def install
       bin.install "tf"
@@ -18,16 +18,16 @@ class Tf < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/neomantra/tf/releases/download/v0.0.3/tf_0.0.3_Linux_arm64.tar.gz"
-      sha256 "c4d9d9a4d46fb67675beca02b1a27c654af35e6596beb747519f55d49a77a4be"
+      url "https://github.com/neomantra/tf/releases/download/v0.0.4/tf_0.0.4_Linux_arm64.tar.gz"
+      sha256 "beee2368cf3c5b2f1640e1acbaa677657151058a730ad3574f4d3bc5b926569c"
 
       def install
         bin.install "tf"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/neomantra/tf/releases/download/v0.0.3/tf_0.0.3_Linux_x86_64.tar.gz"
-      sha256 "308ed657422deea302791b303e7ad77cbc29df5d5c064425bb0ad5d23e51e438"
+      url "https://github.com/neomantra/tf/releases/download/v0.0.4/tf_0.0.4_Linux_x86_64.tar.gz"
+      sha256 "993d5c82975e2a111e406837cf6f95f841b6f2975cd9e2c0a6e197bc79d429e0"
 
       def install
         bin.install "tf"
