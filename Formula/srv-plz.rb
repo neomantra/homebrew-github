@@ -5,11 +5,11 @@
 class SrvPlz < Formula
   desc "SRV record extractor"
   homepage "https://github.com/neomantra/srv-plz"
-  version "0.2.0"
+  version "0.3.0"
 
   on_macos do
-    url "https://github.com/neomantra/srv-plz/releases/download/v0.2.0/srv-plz_0.2.0_Darwin_all.tar.gz"
-    sha256 "8c6a94feed653788dd8a4c58f06b7eb32c67fc6c92cbb8940e54053e60c01cd0"
+    url "https://github.com/neomantra/srv-plz/releases/download/v0.3.0/srv-plz_0.3.0_Darwin_all.tar.gz"
+    sha256 "c1fc4110798ea31dab5d2706751e5e7c14a5b01ba47ff9d1ef7eafcac88a5c05"
 
     def install
       bin.install "srv-plz"
@@ -18,16 +18,16 @@ class SrvPlz < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/neomantra/srv-plz/releases/download/v0.2.0/srv-plz_0.2.0_Linux_arm64.tar.gz"
-      sha256 "91dd441128bfe1b912cf016ccc2c306115d22e56173fb8fb44f89b4523945933"
+      url "https://github.com/neomantra/srv-plz/releases/download/v0.3.0/srv-plz_0.3.0_Linux_arm64.tar.gz"
+      sha256 "e3293f9204b7d388b91712d2ef62054782589c7ca97bae3bfc4b72e55fb111b9"
 
       def install
         bin.install "srv-plz"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/neomantra/srv-plz/releases/download/v0.2.0/srv-plz_0.2.0_Linux_x86_64.tar.gz"
-      sha256 "fd5d06198fcecacb1982830017515ea8f7a4aa85b834b453882ad8603eba6855"
+      url "https://github.com/neomantra/srv-plz/releases/download/v0.3.0/srv-plz_0.3.0_Linux_x86_64.tar.gz"
+      sha256 "dc0fdb02e7d19b2fcddb8b8767594a71a8a7602123f48df5fbdc5c93e69db464"
 
       def install
         bin.install "srv-plz"
