@@ -5,20 +5,20 @@
 class GoOpenchargemap < Formula
   desc "Golang interface to OpenChargeMap with a 'chargemeup' CLI tool"
   homepage "https://github.com/neomantra/go-openchargemap"
-  version "0.1.0"
+  version "0.2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/neomantra/go-openchargemap/releases/download/v0.1.0/go-openchargemap_0.1.0_darwin_arm64.tar.gz"
-      sha256 "7d9225388995ab990749ee4368260b049a1c72c8c60cf8f6cb07fd566e977ff0"
+      url "https://github.com/neomantra/go-openchargemap/releases/download/v0.2.0/go-openchargemap_0.2.0_darwin_arm64.tar.gz"
+      sha256 "570c78a673620491aa5685282f2e58bb61995e444e642fe628f39e16873f756f"
 
       def install
         bin.install "chargemeup"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/neomantra/go-openchargemap/releases/download/v0.1.0/go-openchargemap_0.1.0_darwin_amd64.tar.gz"
-      sha256 "415109a6053c617607d62c8f9f4412fbb3448cf179eae2fac4e0b877619ae25c"
+      url "https://github.com/neomantra/go-openchargemap/releases/download/v0.2.0/go-openchargemap_0.2.0_darwin_amd64.tar.gz"
+      sha256 "2fc13ffadc0a5d78b12fcf711044376c52d77585ae735757e326b7effc7e8dc9"
 
       def install
         bin.install "chargemeup"
@@ -27,17 +27,17 @@ class GoOpenchargemap < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/neomantra/go-openchargemap/releases/download/v0.1.0/go-openchargemap_0.1.0_linux_amd64.tar.gz"
-      sha256 "43b1efbe4036c1e28544a961ab082f9ca6c74f64ef1ed8afb255d1547da51639"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/neomantra/go-openchargemap/releases/download/v0.2.0/go-openchargemap_0.2.0_linux_arm64.tar.gz"
+      sha256 "40013c2488b83a77dd167d3056b517da7ffe17a3354ac7e129daf031199d4c0f"
 
       def install
         bin.install "chargemeup"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/neomantra/go-openchargemap/releases/download/v0.1.0/go-openchargemap_0.1.0_linux_arm64.tar.gz"
-      sha256 "b660ea3e62ca1f4f8b27080b4b5e353dd5a18de40d169bd840c83176862ee8c2"
+    if Hardware::CPU.intel?
+      url "https://github.com/neomantra/go-openchargemap/releases/download/v0.2.0/go-openchargemap_0.2.0_linux_amd64.tar.gz"
+      sha256 "7b91035af9b17f456849e4230653e398268539a0c7b1982ccd9c98f07eed4b0e"
 
       def install
         bin.install "chargemeup"
